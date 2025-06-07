@@ -30,16 +30,22 @@ function Content() {
   return (
     <div className='content'>
         <div className='inputSectionforCode'>
-            <label htmlFor="inputText"><i class="bi bi-code-slash"></i>Type your code here</label>
+            <div className="label">
+                <div><i class="bi bi-code-slash fs-3"></i></div>
+                <div><label htmlFor="inputText">Write your code here</label></div>
+            </div>
             <textarea ref={inputRef} id="inputText" className='inputText' placeholder='<h1>Hello World</h1>'></textarea>
             <div className='inputSectionforCodeBtns'>
-                <button onClick={handleRunCode}><i class="bi bi-play"></i> Run Code</button>
-                <button onClick={handleSaveCode}><i class="bi bi-save"></i> Save Code</button>
-                <button onClick={handleClearCode}><i class="bi bi-trash"></i> Clear</button>
+                <button className='btn ' onClick={handleRunCode}><i class="bi bi-play"></i> Run Code</button>
+                <button className='btn' onClick={handleSaveCode}><i class="bi bi-save"></i> Save Code</button>
+                <button className='btn' onClick={handleClearCode}><i class="bi bi-trash"></i> Clear</button>
             </div>
         </div>
         <div className='outputSectionforCode'>
-            <label htmlFor="outputText"><i class="bi bi-terminal"></i>Output</label>
+            <div className='outputSectionforCodeLabel'>
+                <i class="bi bi-terminal fs-3"></i>
+                <label htmlFor="outputText">Output</label>
+            </div>
             <iframe ref={outputRef}></iframe>
         </div>
     </div>
