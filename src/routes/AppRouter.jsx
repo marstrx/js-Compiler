@@ -1,14 +1,14 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from '../layouts/Header';
 import Footer from '../layouts/Footer';
-import Home from '../pages/Home';
+import Home from '../pages/Home'; 
 import Docs from '../pages/Docs';
 import Examples from '../pages/Examples';
 
 export default function AppRouter() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="app-wrapper">
         <Header />
         <main className="main-content">
@@ -21,6 +21,6 @@ export default function AppRouter() {
         </main>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }

@@ -1,0 +1,122 @@
+.home {
+  display: flex;
+  min-height: 100vh;
+  padding: 20px;
+  align-items: center;
+}
+
+.homeLeftSide,
+.homeRightSide {
+  flex: 1;
+  padding: 20px;
+}
+
+.homeLeftSide img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.homeRightSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.homeRightSide h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.homeRightSide p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #34495e;
+}
+
+.homeBtns {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: white;
+  border: 2px solid #3498db;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #3498db;
+  border: 2px solid #3498db;
+}
+
+.btn-secondary:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+@media (max-width: 771px) {
+  .home {
+    flex-direction: column;
+    padding: 15px;
+    margin-top: 70px;
+    
+  }}
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    padding: 15px;
+
+  }
+  
+  .homeLeftSide,
+  .homeRightSide {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .homeRightSide h1 {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+  
+  .btn {
+    flex: 1;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .homeRightSide h1 {
+    font-size: 1.8rem;
+  }
+  
+  .homeBtns {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
