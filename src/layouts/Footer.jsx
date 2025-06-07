@@ -12,11 +12,11 @@ function Footer() {
         <div className="social-links">
             <p>Follow me on </p>
             <p><i class="bi bi-github"></i>
-            <a href="https://github.com"> GitHub</a></p>
+            <a href="https://github.com/marstrx"> GitHub</a></p>
             <p><i class="bi bi-twitter-x"></i>
-            <a href="https://twitter.com"> Elon</a></p>
+            <a href="https://x.com/marstr__1"> Elon</a></p>
             <p><i class="bi bi-linkedin"></i>
-            <a href="https://linkedin.com"> LinkedIn</a></p>
+            <a href="https://www.linkedin.com/in/marouanebachar"> LinkedIn</a></p>
         </div>
     </footer>
   )
