@@ -1,0 +1,40 @@
+.content {
+  padding: 30px;
+}
+.inputText{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 20px;
+    outline: none;
+    resize: none;
+    height: 400px;
+    color: darkgreen !important;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    font-weight: 700;
+}
+.inputSectionforCodeBtns{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.outputSectionforCode{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.outputSectionforCode iframe{
+    width: 100%;
+    height: 400px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: scroll;
+
+}

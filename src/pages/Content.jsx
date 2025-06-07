@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRef } from 'react';
+import './Content.css';
 
 function Content() {
     const inputRef = useRef(null);
