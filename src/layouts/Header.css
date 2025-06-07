@@ -1,5 +1,87 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    position: fixed;
+    width: 100%;
+    background-color: #724a4a;
+    z-index: 999;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.header-logo h2 {
+    color: white;
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.header-logo h2:hover{
+    color: pink;
+}
+.header-container ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.header-container ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header-container ul li a:hover {
+    color: pink;
+}
+.menuIcon{
+    display: none;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+  .header-container ul {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #724a4a;
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+
+  .header-container ul.show-menu {
+    display: flex;
+  }
+
+  .menuIcon {
+    display: block;
+  }
 }
