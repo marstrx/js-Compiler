@@ -1,6 +1,7 @@
 import React from 'react';
 import homepage from "../assets/homepage.jpg";
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
@@ -14,8 +15,8 @@ export default function Home() {
                 JsCompiler is a powerful online JavaScript compiler that allows you to write, run, and share JavaScript code directly in your browser.
             </p>
             <div className='homeBtns'>
-                <a href="/Content" className='btn btn-primary'>Try</a>
-                <a href="/examples" className='btn btn-secondary'>Examples</a>
+                <Link to="/Content" className='btn btn-primary'>Try Now</Link>
+                <Link to="/examples" className='btn btn-secondary'>Examples</Link>
             </div>
         </div>
     </div>
