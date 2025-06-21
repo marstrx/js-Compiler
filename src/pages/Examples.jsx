@@ -61,7 +61,7 @@ function Examples() {
       <h4>Example 1:</h4>
       <p>This example demonstrates a simple HTML page with a heading.</p>
       <button
-        className="examples-copy-btn"
+        className="btn examples-copy-btn"
         onClick={() => copyToClipboard(example1Code)}
       >
         <i className="bi bi-copy"></i> Copy
@@ -74,7 +74,7 @@ function Examples() {
       <h4>Example 2:</h4>
       <p>This example shows a button that changes color when clicked.</p>
       <button
-        className="examples-copy-btn"
+        className="btn examples-copy-btn"
         onClick={() => copyToClipboard(example2Code)}
       >
         <i className="bi bi-copy"></i> Copy
@@ -87,7 +87,7 @@ function Examples() {
       <h4>Example 3:</h4>
       <p>This example demonstrates a simple form with three input fields and CSS.</p>
       <button
-        className="examples-copy-btn"
+        className="btn examples-copy-btn"
         onClick={() => copyToClipboard(example3Code)}
       >
         <i className="bi bi-copy"></i> Copy

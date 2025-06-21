@@ -36,8 +36,8 @@ function Content() {
             </div>
             <textarea ref={inputRef} id="inputText" className='inputText' placeholder='<h1>Hello World</h1>'></textarea>
             <div className='inputSectionforCodeBtns'>
-                <button className='btn ' onClick={handleRunCode}><i class="bi bi-play"></i> Run Code</button>
-                <button className='btn' onClick={handleSaveCode}><i class="bi bi-save"></i> Save Code</button>
+                <button className='btn ' onClick={handleRunCode}><i class="bi bi-play"></i> Run</button>
+                <button className='btn' onClick={handleSaveCode}><i class="bi bi-save"></i> Save</button>
                 <button className='btn' onClick={handleClearCode}><i class="bi bi-trash"></i> Clear</button>
             </div>
         </div>
