@@ -1,8 +1,14 @@
 import React from 'react';
 import { useRef } from 'react';
+import Html from './FilesType/Html/Html';
 import './Content.css';
 
 function Content() {
+    const [showHtml, setShowHtml] = React.useState(false);
+    const handleShowHtml = () => {
+        setShowHtml(true);
+    };
+
     const inputRef = useRef(null);
     const outputRef = useRef(null);
 
@@ -28,12 +34,19 @@ function Content() {
         outputRef.current.srcdoc="";
     }
   return (
+    
     <div className='content'>
         <div className='inputSectionforCode'>
             <div className="label">
                 <div><i class="bi bi-code-slash fs-3"></i></div>
                 <div><label htmlFor="inputText">Write your code here</label></div>
             </div>
+            <div>
+                <button onClick={handleShowHtml}>index.html</button>
+                <button>script.js</button>
+                <button>style.css</button>
+            </div>
+            {showHtml && <Html />}
             <textarea ref={inputRef} id="inputText" className='inputText' placeholder='<h1>Hello World</h1>'></textarea>
             <div className='inputSectionforCodeBtns'>
                 <button className='btn ' onClick={handleRunCode}><i class="bi bi-play"></i> Run</button>
