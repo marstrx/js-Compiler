@@ -3,7 +3,6 @@ import './Content.css';
 import Css from './FilesType/Css/Css';
 import Script from './FilesType/Script/Script';
 import Html from './FilesType/Html/Html';
-import Output from './Output/Output';
 
 function Content() {
     const [showHtml, setShowHtml] = React.useState(true);
@@ -75,8 +74,13 @@ function Content() {
                 <button className='btn' onClick={handleClearCode}><i class="bi bi-trash"></i> Clear</button>
             </div>
         </div>
-        {/* output */}
-        <Output/>
+        <div className='outputSectionforCode'>
+            <div className='outputSectionforCodeLabel'>
+                <i class="bi bi-terminal fs-3"></i>
+                <label htmlFor="outputText">Output</label>
+            </div>
+            <iframe ref={outputRef}></iframe>
+        </div>
     </div>
   )
 }
