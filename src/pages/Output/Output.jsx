@@ -1,16 +1,13 @@
 import React from 'react';
-import "./Output.css"
-// import { useRef } from 'react';
-
 function Output() {
   return (
     <>
-        <div className='outputSectionforCode'>
-            <div className='outputSectionforCodeLabel'>
+        <div className='flex flex-col bg-sky-100 shadow-md rounded-md h-96'>
+            <div className='flex flex-row gap-3 items-center '>
                 <i class="bi bi-terminal fs-3"></i>
-                <label htmlFor="outputText">Output</label>
+                <label className='text-xl font-bold'>Output</label>
             </div>
-            <iframe></iframe>
+            <iframe className='h-100'></iframe>
         </div>
     </>
   )

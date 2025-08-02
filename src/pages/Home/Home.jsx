@@ -1,8 +1,8 @@
 import React from 'react';
-import homepage from "../assets/homepage.jpg";
+import homepage from "../../assets/Images/homepage.jpg";
 import './Home.css';
 import { Link } from 'react-router-dom';
-import Content from './Content';
+import Content from '../Content';
 
 export default function Home() {
   return (

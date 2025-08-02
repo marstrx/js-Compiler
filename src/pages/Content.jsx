@@ -1,9 +1,10 @@
-import React, { useState ,useRef} from 'react';
+import React, { useState } from 'react';
 import './Content.css';
 import Css from './FilesType/Css/Css';
 import Script from './FilesType/Script/Script';
 import Html from './FilesType/Html/Html';
 import Output from './Output/Output';
+import ActionsBtn from './ActionsBtn/ActionsBtn';
 
 function Content() {
     const [showHtml, setShowHtml] = React.useState(true);
@@ -28,30 +29,30 @@ function Content() {
         setShowHtml(false);
     }
 
-    const inputRef = useRef(null);
-    const outputRef = useRef(null);
+    // const inputRef = useRef(null);
+    // const outputRef = useRef(null);
 
-    const handleRunCode=()=>{
-        const inputCode = inputRef.current.value;
-        const outputFrame = outputRef.current;
-        outputFrame.srcdoc = inputCode;
-    }
-    const handleSaveCode=()=>{
-        const inputCode = inputRef.current.value;
-        const blob = new Blob([inputCode],{
-            type: "text/html"
-        });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download ="marstrx.html";
-        a.click();
-        URL.revokeObjectURL(url);
-    }
-    const handleClearCode=()=>{
-        inputRef.current.value="";
-        outputRef.current.srcdoc="";
-    }
+    // const handleRunCode=()=>{
+    //     const inputCode = inputRef.current.value;
+    //     const outputFrame = outputRef.current;
+    //     outputFrame.srcdoc = inputCode;
+    // }
+    // const handleSaveCode=()=>{
+    //     const inputCode = inputRef.current.value;
+    //     const blob = new Blob([inputCode],{
+    //         type: "text/html"
+    //     });
+    //     const url = URL.createObjectURL(blob);
+    //     const a = document.createElement("a");
+    //     a.href = url;
+    //     a.download ="marstrx.html";
+    //     a.click();
+    //     URL.revokeObjectURL(url);
+    // }
+    // const handleClearCode=()=>{
+    //     inputRef.current.value="";
+    //     outputRef.current.srcdoc="";
+    // }
   return (
     
     <div className='content'>
@@ -69,11 +70,7 @@ function Content() {
             {showCSs && <Css />}
             {showJs && <Script />}
             {/* <textarea ref={inputRef} id="inputText" className='inputText' placeholder='<h1>Hello World</h1>'></textarea> */}
-            <div className='inputSectionforCodeBtns'>
-                <button className='btn ' onClick={handleRunCode}><i class="bi bi-play"></i> Run</button>
-                <button className='btn' onClick={handleSaveCode}><i class="bi bi-save"></i> Save</button>
-                <button className='btn' onClick={handleClearCode}><i class="bi bi-trash"></i> Clear</button>
-            </div>
+            <ActionsBtn/>
         </div>
         {/* output */}
         <Output/>

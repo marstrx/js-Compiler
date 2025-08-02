@@ -1,10 +1,11 @@
 import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
-import Header from '../layouts/Header';
-import Footer from '../layouts/Footer';
-import Home from '../pages/Home'; 
-import Docs from '../pages/Docs';
-import Examples from '../pages/Examples';
+import Header from '../layouts/Header/Header';
+import Footer from '../layouts/Footer/Footer';
+import Examples from '../pages/Examples/Examples';
+import Home from '../pages/Home/Home';
+import Docs from '../pages/Docs/Docs';
+
 
 export default function AppRouter() {
   return (
@@ -14,7 +15,7 @@ export default function AppRouter() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/docs" element={<Docs />} />
+            <Route path="/docs" element={< Docs/>} />
             <Route path="/examples" element={<Examples />} />
             <Route path="*" element={<h1>404</h1>} />
           </Routes>
