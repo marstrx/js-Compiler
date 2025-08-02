@@ -6,11 +6,11 @@ import Content from '../Content';
 export default function Home() {
   return (
     <>
-    <div className="flex flex-row gap-4 my-40 justify-center items-center mr-5.5 ml-5.5" >
-        <div className='shadow-2xl'>
+    <div className="flex flex-col md:flex-row gap-4 my-40 justify-center items-center mr-5.5 ml-5.5" >
+        <div className='shadow-2xl'> 
             <img className='rounded-2xl' src={homepage} alt="" />
         </div>
-        <div className=''>
+        <div className='flex flex-col items-center'>
             <h1 className='font-mono font-bold text-shadow-amber-100'>Welcome to JsCompiler</h1>
             <p>
                 JsCompiler is a powerful online JavaScript compiler that allows you to write, run, and share JavaScript code directly in your browser.
