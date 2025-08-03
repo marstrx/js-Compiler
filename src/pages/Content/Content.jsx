@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './Content.css';
-import Css from './FilesType/Css/Css';
-import Script from './FilesType/Script/Script';
-import Html from './FilesType/Html/Html';
-import Output from './Output/Output';
-import ActionsBtn from './ActionsBtn/ActionsBtn';
+import Css from '../FilesType/Css/Css';
+import Script from '../FilesType/Script/Script';
+import Html from '../FilesType/Html/Html';
+import Output from '../Output/Output';
+import ActionsBtn from '../ActionsBtn/ActionsBtn';
 
 function Content() {
     const [showHtml, setShowHtml] = React.useState(true);
@@ -61,18 +61,17 @@ function Content() {
                 <div><i class="bi bi-code-slash fs-3"></i></div>
                 <div><label htmlFor="inputText">Write your code here</label></div>
             </div>
-            <div>
-                <button onClick={handleShowHtml}>index.html</button>
-                <button onClick={handleShowJs}>script.js</button>
-                <button onClick={handleShowCSs}>style.css</button>
+            <div className='flex gap-2 w-full'>
+                <button className='flex-1 bg-orange-600 text-white py-2 rounded font-mono' onClick={handleShowHtml}>index.html</button>
+                <button className='flex-1 bg-blue-600 text-white py-2 rounded font-mono' onClick={handleShowCSs}>style.css</button>
+                <button className='flex-1 bg-yellow-600 text-white py-2 rounded font-mono' onClick={handleShowJs}>script.js</button>
             </div>
             {showHtml && <Html />}
             {showCSs && <Css />}
             {showJs && <Script />}
-            {/* <textarea ref={inputRef} id="inputText" className='inputText' placeholder='<h1>Hello World</h1>'></textarea> */}
             <ActionsBtn/>
         </div>
-        {/* output */}
+        {/* output components*/}
         <Output/>
     </div>
   )

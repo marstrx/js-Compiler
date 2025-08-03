@@ -1,7 +1,8 @@
 import React from 'react';
 import homepage from "../../assets/Images/homepage.jpg";
 import { Link } from 'react-router-dom';
-import Content from '../Content';
+import Content from '../Content/Content';
+
 
 export default function Home() {
   return (
