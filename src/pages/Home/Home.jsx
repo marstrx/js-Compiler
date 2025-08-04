@@ -16,9 +16,9 @@ export default function Home() {
             <p>
                 JsCompiler is a powerful online JavaScript compiler that allows you to write, run, and share JavaScript code directly in your browser.
             </p>
-            <div className='flex flex-row gap-7 ml-10'>
+            <div className='flex flex-row gap-7'>
                 
-                <button className='flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-2 shadow-md transition-all duration-300'>
+                <button className='flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold  px-4 rounded-2 shadow-md transition-all duration-300'>
                     <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
                     </svg>
