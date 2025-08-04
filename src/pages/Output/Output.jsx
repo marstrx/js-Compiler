@@ -1,5 +1,16 @@
 import React from 'react';
-function Output() {
+function Output({htmlCode,cssCode,jsCode}) {
+  const outputSrcDoc =`
+  <html>
+  <head>
+  <style>${cssCode}</style>
+  </head>
+  <body>
+  ${htmlCode}
+  <script>${jsCode}</script>
+  </body>
+  </html>
+  `
   return (
     <>
         <div className=''>
@@ -7,7 +18,10 @@ function Output() {
                 <i class="bi bi-terminal fs-3"></i>
                 <label className='text-xl font-bold'>Output</label>
             </div>
-            <iframe className='h-64 bg-blue-100 mt-3 mb-3 rounded-2 p-2 border-red-50 outline-2 w-full'></iframe>
+            <iframe className='h-64 bg-blue-100 mt-3 mb-3 rounded-2 p-2 border-red-50 outline-2 w-full'
+            srcDoc={outputSrcDoc}>
+
+            </iframe>
         </div>
     </>
   )

@@ -78,7 +78,7 @@ function Content() {
             <ActionsBtn/>
         </div>
         {/* output components*/}
-        <Output/>
+        <Output htmlCode={htmlCode} cssCode={cssCode} jsCode={jsCode}/>
     </div>
   )
 }
