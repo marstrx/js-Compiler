@@ -7,9 +7,15 @@ import Output from '../Output/Output';
 import ActionsBtn from '../ActionsBtn/ActionsBtn';
 
 function Content() {
-    const [showHtml, setShowHtml] = React.useState(true);
+    const [showHtml, setShowHtml] = useState(true);
     const [showCSs , setShowCss] = useState(false);
     const [showJs ,setShowJs] = useState(false);
+
+    
+    const [htmlCode ,setHtmlCode] =useState();
+    const [cssCode ,setCssCode ] = useState();
+    const [jsCode ,setJsCode] = useState();
+
     // handle show html
     const handleShowHtml = () => {
         setShowHtml(true);
@@ -66,9 +72,9 @@ function Content() {
                 <button className='flex-1 bg-blue-600 text-white py-2 rounded font-mono' onClick={handleShowCSs}>style.css</button>
                 <button className='flex-1 bg-yellow-600 text-white py-2 rounded font-mono' onClick={handleShowJs}>script.js</button>
             </div>
-            {showHtml && <Html />}
-            {showCSs && <Css />}
-            {showJs && <Script />}
+            {showHtml && <Html htmlCode={htmlCode} setHtmlCode={setHtmlCode}/>}
+            {showCSs && <Css cssCode={cssCode} setCssCode={setCssCode}/>}
+            {showJs && <Script jsCode={jsCode} setJsCode={setJsCode}/>}
             <ActionsBtn/>
         </div>
         {/* output components*/}
