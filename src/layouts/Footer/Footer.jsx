@@ -1,23 +1,22 @@
 import React from 'react'
-import './Footer.css'
-
+import "./Footer.css"
 function Footer() {
   return (
-    <footer>
-        <div>
-            <p className="footer-text">
+    <footer className='bg-zinc-500 text-white gap-3 block md:flex justify-between p-3'>
+      
+            <p className="flex items-center justify-center ml-5.5 font-bold font-mono"> 
             &copy; {new Date().getFullYear()} JsCompiler. All rights reserved.
             </p>
-        </div>
-        <div className="social-links">
-            <p>Follow me on </p>
+       
+            <div className='flex gap-3 items-center justify-center mr-5.5 font-bold font-mono'>
+              <p>Follow me on </p>
             <p><i class="bi bi-github"></i>
-            <a href="https://github.com/marstrx"> GitHub</a></p>
+            <a className='text-white' href="https://github.com/marstrx"> GitHub</a></p>
             <p><i class="bi bi-twitter-x"></i>
-            <a href="https://x.com/marstr__1"> Elon</a></p>
+            <a className='text-white' href="https://x.com/marstr__1"> Elon</a></p>
             <p><i class="bi bi-linkedin"></i>
-            <a href="https://www.linkedin.com/in/marouanebachar"> LinkedIn</a></p>
-        </div>
+            <a className='text-white'  href="https://www.linkedin.com/in/marouanebachar"> LinkedIn</a></p>
+            </div>
     </footer>
   )
 }

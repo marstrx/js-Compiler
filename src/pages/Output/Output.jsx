@@ -16,7 +16,7 @@ function Output() {
   `
   return (
     <>
-        <div className=''>
+        <div className='mb-20 md:mb-30'>
             <div className='flex flex-row gap-3 items-center '>
                 <i class="bi bi-terminal fs-3"></i>
                 <label className='text-xl font-bold'>Output</label>

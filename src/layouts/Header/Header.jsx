@@ -8,7 +8,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-zinc-400 text-white fixed w-full top-0 left-0 shadow-md z-50">
+    <header className="bg-zinc-500 text-white fixed w-full top-0 left-0 shadow-md z-50">
       <div className="flex justify-between items-center px-4 py-3">
         <div className="flex items-center gap-1 ">
           <img src={jslogo} alt="JS Logo" className="w-10 h-10 rounded-full mb-2.5" />
