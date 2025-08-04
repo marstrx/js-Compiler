@@ -1,5 +1,8 @@
-import React from 'react';
-function Output({htmlCode,cssCode,jsCode}) {
+import React, { useContext } from 'react';
+import { EditorContext } from '../Context/EditorContext';
+
+function Output() {
+  const {htmlCode,cssCode,jsCode} = useContext(EditorContext);
   const outputSrcDoc =`
   <html>
   <head>

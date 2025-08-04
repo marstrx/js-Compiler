@@ -12,9 +12,9 @@ function Content() {
     const [showJs ,setShowJs] = useState(false);
 
     
-    const [htmlCode ,setHtmlCode] =useState();
-    const [cssCode ,setCssCode ] = useState();
-    const [jsCode ,setJsCode] = useState();
+    // const [htmlCode ,setHtmlCode] =useState();
+    // const [cssCode ,setCssCode ] = useState();
+    // const [jsCode ,setJsCode] = useState();
 
     // handle show html
     const handleShowHtml = () => {
@@ -72,13 +72,13 @@ function Content() {
                 <button className='flex-1 bg-blue-600 text-white py-2 rounded font-mono' onClick={handleShowCSs}>style.css</button>
                 <button className='flex-1 bg-yellow-600 text-white py-2 rounded font-mono' onClick={handleShowJs}>script.js</button>
             </div>
-            {showHtml && <Html htmlCode={htmlCode} setHtmlCode={setHtmlCode}/>}
-            {showCSs && <Css cssCode={cssCode} setCssCode={setCssCode}/>}
-            {showJs && <Script jsCode={jsCode} setJsCode={setJsCode}/>}
+            {showHtml && <Html />}
+            {showCSs && <Css />}
+            {showJs && <Script/>}
             <ActionsBtn/>
         </div>
         {/* output components*/}
-        <Output htmlCode={htmlCode} cssCode={cssCode} jsCode={jsCode}/>
+        <Output />
     </div>
   )
 }

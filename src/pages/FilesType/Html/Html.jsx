@@ -1,6 +1,8 @@
+import { useContext } from "react"
+import { EditorContext } from "../../Context/EditorContext"
 
-function Html({setHtmlCode ,htmlCode}) {
-
+function Html() {
+  const {htmlCode,setHtmlCode} = useContext(EditorContext)
   const handleHtmlChange=(e)=>{
     setHtmlCode(e.target.value)
   }

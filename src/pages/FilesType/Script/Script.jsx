@@ -1,6 +1,7 @@
-import React from 'react'
-
-function Script({jsCode,setJsCode}) {
+import React, { useContext } from 'react'
+import { EditorContext } from '../../Context/EditorContext';
+function Script() {
+  const {jsCode,setJsCode} = useContext(EditorContext);
   const handelJsChange =(e)=>{
     setJsCode(e.target.value);
   }

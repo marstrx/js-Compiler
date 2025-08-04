@@ -1,6 +1,7 @@
-import React from 'react'
-function Css({cssCode,setCssCode}) {
-
+import React, { useContext } from 'react';
+import { EditorContext } from '../../Context/EditorContext';
+function Css() {
+  const {cssCode,setCssCode} = useContext(EditorContext);
   const handleCssChange=(e)=>{
     setCssCode(e.target.value)
   }
