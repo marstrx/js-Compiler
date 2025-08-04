@@ -12,9 +12,7 @@ function Content() {
     const [showJs ,setShowJs] = useState(false);
 
     
-    // const [htmlCode ,setHtmlCode] =useState();
-    // const [cssCode ,setCssCode ] = useState();
-    // const [jsCode ,setJsCode] = useState();
+   
 
     // handle show html
     const handleShowHtml = () => {
@@ -35,14 +33,7 @@ function Content() {
         setShowHtml(false);
     }
 
-    // const inputRef = useRef(null);
-    // const outputRef = useRef(null);
-
-    // const handleRunCode=()=>{
-    //     const inputCode = inputRef.current.value;
-    //     const outputFrame = outputRef.current;
-    //     outputFrame.srcdoc = inputCode;
-    // }
+   
     // const handleSaveCode=()=>{
     //     const inputCode = inputRef.current.value;
     //     const blob = new Blob([inputCode],{
@@ -55,10 +46,7 @@ function Content() {
     //     a.click();
     //     URL.revokeObjectURL(url);
     // }
-    // const handleClearCode=()=>{
-    //     inputRef.current.value="";
-    //     outputRef.current.srcdoc="";
-    // }
+   
   return (
     
     <div className='content'>
