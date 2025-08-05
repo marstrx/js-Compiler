@@ -2,8 +2,8 @@ import React from 'react'
 import "./Docs.css";
 function Docs() {
   return (
-    <div className="flex flex-col ml-5.5 mr-5.5 my-30 mb-30">
-    <h3 className=''>Documentation</h3>
+    <div className="flex flex-col ml-5.5 mr-5.5 my-30 mb-30 font-mono">
+    <h3 className="relative after:content-[''] after:block after:w-40 after:h-[3px] after:bg-blue-500 after:absolute after:left-0 after:-bottom-1">Documentation</h3>
     <p>Welcome to the documentation page. Here you will find all the information you need to get started with our project.</p>
     <h4>Getting Started</h4>
     <p>To get started, you can follow the steps below:</p>

@@ -64,7 +64,7 @@ const examples = [
 
   return (
     <div className="mr-5.5 ml-5.5 font-mono mb-30 my-30">
-      <h3>Examples</h3>
+      <h3 className="relative after:content-[''] after:block after:w-30 after:h-[3px] after:bg-blue-500 after:absolute after:left-0 after:-bottom-1">Examples</h3>
       <p>Here are some examples of how to use the features of this project:</p>
 
       {examples.map((ex, i) => (
