@@ -17,7 +17,7 @@ function Css() {
 
 
         <CodeMirror
-        className='h-64 mt-3 mb-3 rounded-2 p-2 border-red-50 outline-2'
+        className='h-64 mt-3 mb-3 rounded-2 p-2 border-red-50 outline-2 overflow-x-auto'
           value={cssCode}
           extensions={[css({ jsx: true }),
             autocompletion(),

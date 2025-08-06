@@ -17,7 +17,7 @@ function Html() {
         {/* <textarea onChange={handleHtmlChange} value={htmlCode} id="inputText" className='h-64 bg-blue-100 mt-3 mb-3 rounded-2 p-2 border-red-50 outline-2' placeholder='<h1>Hello World</h1>'></textarea> */}
 
         <CodeMirror
-        className='h-64 mt-3 mb-3 rounded-2 p-2 border-red-50 outline-2'
+        className='h-64 mt-3 mb-3 rounded-2 p-2 border-red-50 outline-2 overflow-x-auto'
           value={htmlCode}
           extensions={[html({ jsx: true }),
             autocompletion(),
