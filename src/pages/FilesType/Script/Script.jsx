@@ -3,6 +3,8 @@ import { EditorContext } from '../../Context/EditorContext';
 import CodeMirror from '@uiw/react-codemirror'; 
 import { javascript } from '@codemirror/lang-javascript';
 import { autocompletion } from "@codemirror/autocomplete";
+import { color } from '@uiw/codemirror-extensions-color';
+
 function Script() {
   const {jsCode,setJsCode} = useContext(EditorContext);
   const handelJsChange =(value)=>{
@@ -18,7 +20,7 @@ function Script() {
           value={jsCode}
           extensions={[javascript({ jsx: true }),
             autocompletion(),
-            
+            color
           ]}
           onChange={handelJsChange}
         />

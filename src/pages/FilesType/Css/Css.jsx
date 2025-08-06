@@ -3,6 +3,8 @@ import { EditorContext } from '../../Context/EditorContext';
 import CodeMirror from '@uiw/react-codemirror'; 
 import { css } from '@codemirror/lang-css';
 import { autocompletion } from "@codemirror/autocomplete";
+import { color } from '@uiw/codemirror-extensions-color';
+
 function Css() {
   const {cssCode,setCssCode} = useContext(EditorContext);
   const handleCssChange=(value)=>{
@@ -19,6 +21,7 @@ function Css() {
           value={cssCode}
           extensions={[css({ jsx: true }),
             autocompletion(),
+            color,
             
           ]}
           onChange={handleCssChange}

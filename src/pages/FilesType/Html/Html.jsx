@@ -3,6 +3,8 @@ import { EditorContext } from "../../Context/EditorContext";
 import CodeMirror from '@uiw/react-codemirror'; 
 import { html } from '@codemirror/lang-html';
 import { autocompletion } from "@codemirror/autocomplete";
+import { color } from '@uiw/codemirror-extensions-color';
+
 
 function Html() {
   const {htmlCode,setHtmlCode} = useContext(EditorContext)
@@ -19,7 +21,7 @@ function Html() {
           value={htmlCode}
           extensions={[html({ jsx: true }),
             autocompletion(),
-            
+            color
           ]}
           onChange={handleHtmlChange}
         />

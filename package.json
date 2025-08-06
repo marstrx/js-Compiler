@@ -17,6 +17,7 @@
     "@codemirror/lang-html": "github:codemirror/lang-html",
     "@codemirror/lang-javascript": "^6.2.4",
     "@tailwindcss/vite": "^4.1.11",
+    "@uiw/codemirror-extensions-color": "^4.24.2",
     "@uiw/react-codemirror": "^4.24.2",
     "bootstrap": "^5.3.6",
     "bootstrap-icons": "^1.13.1",
