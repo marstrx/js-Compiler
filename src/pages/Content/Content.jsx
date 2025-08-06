@@ -32,20 +32,6 @@ function Content({ scrollRef }) {
         setShowCss(false);
         setShowHtml(false);
     }
-
-   
-    // const handleSaveCode=()=>{
-    //     const inputCode = inputRef.current.value;
-    //     const blob = new Blob([inputCode],{
-    //         type: "text/html"
-    //     });
-    //     const url = URL.createObjectURL(blob);
-    //     const a = document.createElement("a");
-    //     a.href = url;
-    //     a.download ="marstrx.html";
-    //     a.click();
-    //     URL.revokeObjectURL(url);
-    // }
    
   return (
     

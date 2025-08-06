@@ -17,14 +17,28 @@ function ActionsBtn() {
     </html>
     `
   ;
+  // run code 
   const handleRunCode =()=>{
     setOutputSrcDoc(allCodesFile);
   }
+  // clear code 
   const handleClear =()=>{
     setHtmlCode("");
     setCssCode("");
     setJsCode("");
     setOutputSrcDoc("");
+  }
+  // save code 
+  const handleSaveCode =()=>{
+        const blob = new Blob([allCodesFile],{
+            type: "text/html"
+        });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download ="marstrx.html";
+        a.click();
+        URL.revokeObjectURL(url);
   }
   return (
     <>
@@ -34,7 +48,7 @@ function ActionsBtn() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
           </svg>
  Run</button>
-        <button className='flex-1 bg-yellow-600 text-white py-2 rounded font-mono flex items-center justify-center'>
+        <button onClick={handleSaveCode} className='flex-1 bg-yellow-600 text-white py-2 rounded font-mono flex items-center justify-center'>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
           </svg>
