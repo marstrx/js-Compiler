@@ -17,8 +17,8 @@ export default function Home() {
             <img className='rounded-2xl' src={homepage} alt="" />
         </div>
         <div className='flex flex-col items-center'>
-            <h1 className='font-mono font-bold text-shadow-amber-100'>Welcome to JsCompiler</h1>
-            <p>
+            <h1 className='font-mono font-bold text-shadow-amber-100 text-center'>Welcome to JsCompiler</h1>
+            <p className="text-center">
                 JsCompiler is a powerful online JavaScript compiler that allows you to write, run, and share JavaScript code directly in your browser.
             </p>
             <div className='flex flex-row gap-7'>
