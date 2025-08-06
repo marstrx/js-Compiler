@@ -2,18 +2,8 @@ import React, { useContext } from 'react';
 import { EditorContext } from '../Context/EditorContext';
 
 function Output() {
-  const {htmlCode,cssCode,jsCode} = useContext(EditorContext);
-  const outputSrcDoc =`
-  <html>
-  <head>
-  <style>${cssCode}</style>
-  </head>
-  <body>
-  ${htmlCode}
-  <script>${jsCode}</script>
-  </body>
-  </html>
-  `
+  const {outputSrcDoc} = useContext(EditorContext);
+  
   return (
     <>
         <div className='mb-20 md:mb-30'>

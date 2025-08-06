@@ -8,8 +8,10 @@ export const EditorProvider =({children})=>{
     const [cssCode ,setCssCode ] = useState("");
     const [jsCode ,setJsCode] = useState("");
 
+    const [outputSrcDoc , setOutputSrcDoc] = useState()
+
     return(
-        <EditorContext.Provider value={{htmlCode,setHtmlCode,cssCode,setCssCode,jsCode,setJsCode}}>
+        <EditorContext.Provider value={{htmlCode,setHtmlCode,cssCode,setCssCode,jsCode,setJsCode ,outputSrcDoc,setOutputSrcDoc}}>
             {children}
         </EditorContext.Provider>
     )
