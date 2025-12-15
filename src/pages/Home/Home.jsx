@@ -1,6 +1,5 @@
 import homepage from "../../assets/Images/homepage.jpg";
 import { Link } from 'react-router-dom';
-import Content from '../Content/Content';
 import { useRef } from "react";
 
 
@@ -40,7 +39,7 @@ export default function Home() {
         </div>
         
     </div>
-    <Content scrollRef={contentRef}/>
+   
     </>
   )
 }

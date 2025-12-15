@@ -22,6 +22,11 @@ function Header() {
             </Link>
           </li>
           <li>
+            <Link style={{textDecoration:"none"}} to="/playground" className=" text-white">
+              Playground
+            </Link>
+          </li>
+          <li>
             <Link style={{textDecoration:"none"}} to="/docs" className=" text-white">
               Docs
             </Link>
