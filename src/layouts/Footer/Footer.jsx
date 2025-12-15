@@ -1,33 +1,85 @@
-import React from 'react'
-import "./Footer.css"
+import React from "react";
+import "./Footer.css";
 function Footer() {
   return (
-    
     <>
-    <footer className='bg-zinc-500 text-white gap-3 block md:flex justify-between p-3 font-mono'>
-      <div>
-        <p className="flex items-center justify-center ml-5.5">
-          &copy; {new Date().getFullYear()} JsCompiler. All rights reserved.
-        </p>
-      </div>
-      <div className='flex gap-4 justify-center '>
+      <footer className="bg-zinc-500 text-white gap-3 block md:flex justify-between p-3 font-mono">
         <div>
-          <p>Follow me on </p>
+          <p className="flex items-center justify-center ml-5.5">
+            &copy; {new Date().getFullYear()} JsCompiler. All rights reserved.
+          </p>
         </div>
+        <div className="flex gap-4 justify-center ">
+          <div>
+            <p>Follow me on </p>
+          </div>
 
-        <div className='flex gap-6  mr-5.5'>
-          <div ><a style={{textDecoration:"none"}} className='text-white' href="https://github.com/marstrx"></a><i class="bi bi-github"></i>
-          </div>
-          <div><a style={{textDecoration:"none"}} className='text-white' href="https://x.com/marstr__1"></a><i class="bi bi-twitter-x"></i>
-          </div>
-          <div><a style={{textDecoration:"none"}} className='text-white'  href="https://www.linkedin.com/in/marouanebachar"></a><i class="bi bi-linkedin"></i>
+          <div className="flex gap-6  mr-5.5">
+            <div>
+              <a
+                style={{ textDecoration: "none" }}
+                className="text-white"
+                href="https://github.com/marstrx"
+              >
+                <svg
+                  className="w-7 h-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="200"
+                  height="200"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill="#fff"
+                    d="M20 10.25c0 2.234-.636 4.243-1.908 6.027c-1.271 1.784-2.914 3.018-4.928 3.703c-.234.045-.406.014-.514-.093a.539.539 0 0 1-.163-.4V16.67c0-.863-.226-1.495-.677-1.895a8.72 8.72 0 0 0 1.335-.24c.394-.107.802-.28 1.223-.52a3.66 3.66 0 0 0 1.055-.888c.282-.352.512-.819.69-1.402c.178-.583.267-1.252.267-2.008c0-1.077-.343-1.994-1.028-2.75c.32-.81.286-1.717-.105-2.723c-.243-.08-.594-.03-1.054.147a6.94 6.94 0 0 0-1.198.587l-.495.32a9.03 9.03 0 0 0-2.5-.346a9.03 9.03 0 0 0-2.5.347a11.52 11.52 0 0 0-.553-.36c-.23-.143-.593-.314-1.088-.514c-.494-.2-.868-.26-1.12-.18c-.381 1.005-.412 1.912-.09 2.722c-.686.756-1.03 1.673-1.03 2.75c0 .756.09 1.423.268 2.002c.178.578.406 1.045.683 1.401a3.53 3.53 0 0 0 1.048.894c.421.24.83.414 1.224.52c.395.108.84.188 1.335.241c-.347.32-.56.779-.638 1.375a2.539 2.539 0 0 1-.586.2a3.597 3.597 0 0 1-.742.067c-.287 0-.57-.096-.853-.287c-.282-.192-.523-.47-.723-.834a2.133 2.133 0 0 0-.631-.694c-.256-.178-.471-.285-.645-.32l-.26-.04c-.182 0-.308.02-.378.06c-.07.04-.09.09-.065.153a.738.738 0 0 0 .117.187a.961.961 0 0 0 .17.16l.09.066c.192.09.38.259.567.508c.187.249.324.476.41.68l.13.307c.113.338.304.612.574.821c.269.21.56.343.872.4c.312.058.614.09.905.094c.29.004.532-.011.723-.047l.299-.053c0 .338.002.734.007 1.188l.006.72c0 .16-.056.294-.17.4c-.112.108-.286.139-.52.094c-2.014-.685-3.657-1.92-4.928-3.703C.636 14.493 0 12.484 0 10.25c0-1.86.447-3.574 1.341-5.145a10.083 10.083 0 0 1 3.64-3.73A9.6 9.6 0 0 1 10 0a9.6 9.6 0 0 1 5.02 1.375a10.083 10.083 0 0 1 3.639 3.73C19.553 6.675 20 8.391 20 10.25Z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div>
+              <a
+                style={{ textDecoration: "none" }}
+                className="text-white"
+                href="https://x.com/marstrx0"
+              >
+                <svg
+                  className="w-7 h-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="200"
+                  height="200"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="#fff"
+                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584l-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div>
+              <a
+                style={{ textDecoration: "none" }}
+                className="text-white"
+                href="https://www.linkedin.com/in/marstrx/"
+              >
+                <svg
+                  className="w-7 h-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="200"
+                  height="200"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="#fff"
+                    d="M20.47 2H3.53a1.45 1.45 0 0 0-1.47 1.43v17.14A1.45 1.45 0 0 0 3.53 22h16.94a1.45 1.45 0 0 0 1.47-1.43V3.43A1.45 1.45 0 0 0 20.47 2ZM8.09 18.74h-3v-9h3ZM6.59 8.48a1.56 1.56 0 1 1 0-3.12a1.57 1.57 0 1 1 0 3.12Zm12.32 10.26h-3v-4.83c0-1.21-.43-2-1.52-2A1.65 1.65 0 0 0 12.85 13a2 2 0 0 0-.1.73v5h-3v-9h3V11a3 3 0 0 1 2.71-1.5c2 0 3.45 1.29 3.45 4.06Z"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
-
-      </div>
-    </footer>
+      </footer>
     </>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
