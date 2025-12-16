@@ -2,6 +2,7 @@ import homepage from "../../assets/Images/homepage.jpg";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 import Languages from "../Languages/Languages";
+import Start from "../Start/Start";
 
 export default function Home() {
   const contentRef = useRef(null);
@@ -72,6 +73,7 @@ export default function Home() {
       </div>
 
       <Languages/>
+      <Start/>
     </>
   );
 }
