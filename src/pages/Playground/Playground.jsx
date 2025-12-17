@@ -59,7 +59,7 @@ h1 {
     <div className="min-h-screen bg-white p-1 mt-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-1">
         <div className="bg-gray-800 rounded overflow-hidden shadow-lg">
-          <div className="flex items-center border-b border-gray-700">
+          <div className="flex overflow-auto items-center border-b border-gray-700">
             {["html", "css", "js"].map((tab) => (
               <button
                 key={tab}
