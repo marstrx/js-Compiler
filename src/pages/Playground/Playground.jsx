@@ -75,7 +75,7 @@ h1 {
               </button>
             ))}
 
-            <button onClick={runCode} className="mt-2 pl-8">
+            <button onClick={runCode} className="mt-2 pr-8 pl-8">
               <svg
                 className="w-6 h-6"
                 xmlns="http://www.w3.org/2000/svg"
