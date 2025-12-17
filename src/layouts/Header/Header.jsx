@@ -106,6 +106,15 @@ function Header() {
           <li>
             <Link
               style={{ textDecoration: "none" }}
+              to="/playground"
+              className=" text-white"
+            >
+              Playground
+            </Link>
+          </li>
+          <li>
+            <Link
+              style={{ textDecoration: "none" }}
               to="/docs"
               onClick={() => setIsOpen(false)}
               className="no-underline text-white"
