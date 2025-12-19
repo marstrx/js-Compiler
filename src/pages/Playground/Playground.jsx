@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Editor from "@monaco-editor/react";
+import toast, { Toaster } from 'react-hot-toast';
 
 function Playground() {
   const [htmlCode, setHtmlCode] = useState(
@@ -47,6 +48,7 @@ h1 {
     setHtmlCode("");
     setCssCode("");
     setJsCode("");
+    clearCodeToast();
   };
 
   const getLanguage = () =>
@@ -60,6 +62,9 @@ h1 {
     if (activeTab === "css") setCssCode(value || "");
     if (activeTab === "js") setJsCode(value || "");
   };
+
+  // toastes
+  const clearCodeToast = () => toast.success('Code deleted successfully');
 
   return (
     <div className="min-h-screen bg-white p-1 mt-20">
@@ -108,6 +113,7 @@ h1 {
                 />
               </svg>
             </button>
+            <Toaster />
           </div>
 
           <Editor
