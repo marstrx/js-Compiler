@@ -43,6 +43,12 @@ h1 {
     setOutput(result);
   };
 
+  const clearCode = () => {
+    setHtmlCode("");
+    setCssCode("");
+    setJsCode("");
+  };
+
   const getLanguage = () =>
     activeTab === "html" ? "html" : activeTab === "css" ? "css" : "javascript";
 
@@ -84,6 +90,21 @@ h1 {
                 <path
                   fill="#fff"
                   d="M18.54 9L8.88 3.46a3.42 3.42 0 0 0-5.13 3v11.12A3.42 3.42 0 0 0 7.17 21a3.43 3.43 0 0 0 1.71-.46L18.54 15a3.42 3.42 0 0 0 0-5.92Zm-1 4.19l-9.66 5.62a1.44 1.44 0 0 1-1.42 0a1.42 1.42 0 0 1-.71-1.23V6.42a1.42 1.42 0 0 1 .71-1.23A1.51 1.51 0 0 1 7.17 5a1.54 1.54 0 0 1 .71.19l9.66 5.58a1.42 1.42 0 0 1 0 2.46Z"
+                />
+              </svg>
+            </button>
+
+            <button onClick={clearCode} className="mt-2">
+              <svg
+                className="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                width="200"
+                height="200"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#fff"
+                  d="M7 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2h4a1 1 0 1 1 0 2h-1.069l-.867 12.142A2 2 0 0 1 17.069 22H6.93a2 2 0 0 1-1.995-1.858L4.07 8H3a1 1 0 0 1 0-2h4V4zm2 2h6V4H9v2zM6.074 8l.857 12H17.07l.857-12H6.074zM10 10a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0v-6a1 1 0 0 1 1-1zm4 0a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0v-6a1 1 0 0 1 1-1z"
                 />
               </svg>
             </button>
