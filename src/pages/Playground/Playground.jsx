@@ -1,6 +1,10 @@
 import React, { useState } from "react";
-import Editor from "@monaco-editor/react";
-import toast, { Toaster } from 'react-hot-toast';
+import CodeMirror from "@uiw/react-codemirror";
+import { html } from "@codemirror/lang-html";
+import { css } from "@codemirror/lang-css";
+import { javascript } from "@codemirror/lang-javascript";
+// import { vscodeDark } from "@uiw/codemirror-theme-vscode";
+import toast, { Toaster } from "react-hot-toast";
 
 function Playground() {
   const [htmlCode, setHtmlCode] = useState(
@@ -51,11 +55,17 @@ h1 {
     clearCodeToast();
   };
 
-  const getLanguage = () =>
-    activeTab === "html" ? "html" : activeTab === "css" ? "css" : "javascript";
+  const getLanguage = () => {
+    if (activeTab === "html") return [html()];
+    if (activeTab === "css") return [css()];
+    return [javascript()];
+  };
 
-  const getValue = () =>
-    activeTab === "html" ? htmlCode : activeTab === "css" ? cssCode : jsCode;
+  const getValue = () => {
+    if (activeTab === "html") return htmlCode;
+    if (activeTab === "css") return cssCode;
+    return jsCode;
+  };
 
   const handleChange = (value) => {
     if (activeTab === "html") setHtmlCode(value || "");
@@ -63,12 +73,11 @@ h1 {
     if (activeTab === "js") setJsCode(value || "");
   };
 
-  // toastes
-  const clearCodeToast = () => toast.success('Code deleted successfully');
+  const clearCodeToast = () => toast.success("Code deleted successfully");
 
   return (
     <div className="min-h-screen bg-white p-1 mt-20">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-1">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 py-2">
         <div className="bg-gray-800 rounded overflow-hidden shadow-lg">
           <div className="flex overflow-auto items-center border-b border-gray-700">
             {["html", "css", "js"].map((tab) => (
@@ -113,30 +122,47 @@ h1 {
                 />
               </svg>
             </button>
-            <Toaster />
           </div>
-
-          <Editor
-            height="450px"
-            language={getLanguage()}
+          <Toaster />
+          <CodeMirror
             value={getValue()}
+            height="450px"
+            extensions={getLanguage()}
             onChange={handleChange}
-            theme="vs-white"
-            options={{
-              fontSize: 14,
-              minimap: { enabled: false },
+            // theme={vscodeDark}
+            basicSetup={{
+              lineNumbers: true,
+              highlightActiveLineGutter: true,
+              highlightSpecialChars: true,
+              foldGutter: true,
+              drawSelection: true,
+              dropCursor: true,
+              allowMultipleSelections: true,
+              indentOnInput: true,
+              bracketMatching: true,
+              closeBrackets: true,
+              autocompletion: true,
+              rectangularSelection: true,
+              crosshairCursor: true,
+              highlightActiveLine: true,
+              highlightSelectionMatches: true,
+              closeBracketsKeymap: true,
+              searchKeymap: true,
+              foldKeymap: true,
+              completionKeymap: true,
+              lintKeymap: true,
             }}
           />
         </div>
 
         <div className="bg-white rounded-xl overflow-hidden shadow-lg">
-          <div className="bg-gray-800 text-gray-200 px-4 py-2 text-sm">
+          <div className="bg-gray-800 text-gray-200 px-4 py-3 text-sm">
             Preview
           </div>
           <iframe
             title="preview"
             srcDoc={output}
-            className="w-full h-87 border-none"
+            className="w-full h-[450px] border-none"
             sandbox="allow-scripts allow-modals"
           />
         </div>
