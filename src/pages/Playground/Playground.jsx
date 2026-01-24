@@ -176,7 +176,11 @@ h1 {
           />
         </div>
 
-        <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+        <div
+          className={`rounded-xl overflow-hidden shadow-lg transition-colors duration-300 ${
+            isDark ? "bg-[#1e1e1e] text-white" : "bg-white text-black"
+          }`}
+        >
           <div className="bg-gray-800 text-gray-200 px-4 py-3 text-sm">
             Preview
           </div>
