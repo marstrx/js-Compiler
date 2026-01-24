@@ -72,8 +72,8 @@ export default function Home() {
         </div>
       </div>
 
-      <Languages/>
-      <Start/>
+      <Languages />
+      <Start />
     </>
   );
 }

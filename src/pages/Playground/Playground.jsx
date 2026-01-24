@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 function Playground() {
   const [htmlCode, setHtmlCode] = useState(
     `<h1>Hello World</h1>
-<button onclick="sayHi()">Click me</button>`
+<button onclick="sayHi()">Click me</button>`,
   );
 
   const [cssCode, setCssCode] = useState(
@@ -20,13 +20,13 @@ function Playground() {
 
 h1 {
   color: blue;
-}`
+}`,
   );
 
   const [jsCode, setJsCode] = useState(
     `function sayHi() {
   alert("Hello from JS!");
-}`
+}`,
   );
 
   const [activeTab, setActiveTab] = useState("html");
